@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>ChatLlama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">🦙 Multi-Chat</div>
+            <button class="new-chat-btn" id="newChatBtn">+ New Chat</button>
+        </div>
+        <div class="chat-list" id="chatList">
+            <!-- Chat items will be loaded here -->
+        </div>
+    </div>
+
+    <div class="main-area">
+        <div class="header">
+            <h1 id="chatTitle">Llama 3 8B Multi-Chat</h1>
+            <div class="model-info">
+                <div class="status-dot"></div>
+                <span id="modelStatus">Llama 3 8B Q4_K_M Ready</span>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="messages" id="messages">
+                <div class="empty-state" id="emptyState">
+                    <h2>Start a New Conversation</h2>
+                    <p>Each chat has its own memory and context. Click "New Chat" to begin.</p>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea
+                            id="messageInput"
+                            placeholder="Send a message..."
+                            rows="1"
+                        ></textarea>
+                        <button id="sendButton" type="button">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
